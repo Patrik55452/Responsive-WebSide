@@ -1,0 +1,494 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+
+
+
+
+/* NAVIGACE */
+
+nav ul {
+  /* border: 3px solid red; */
+  display: flex;
+  justify-content: space-between; 
+  list-style-type: none;
+}
+
+nav li {
+  flex-grow: 1; 
+  text-align: center;
+}
+
+nav a {
+  font-weight: 800;
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  display: block;
+  background-color: #f0f0f0; 
+}
+
+nav a:hover {
+  background-color: #bc6060; 
+}
+
+/* HAMBURGER MENU */
+
+.hamburger-menu {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* MEDIA QUERRY PRO HAMBURGER MENU */
+
+@media (max-width: 500px) {
+  nav a {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    color: rgb(158, 255, 61);
+  }
+}
+
+/* HLAVNI BANNER */
+
+.hlavnibanner{
+  background-image: url(image/LP.jpeg);
+  background-position: center;
+  background-size: cover; 
+  display: flex;
+  /* border: 3px solid red; */
+  background-color: bisque;
+  height: 60vh;
+}
+
+.hlavnibanner h2{
+  font-size: 40px;
+  color: rgb(0, 106, 255);
+  display: flex;
+  width: 1200px;
+  /* border: 3px solid red; */
+  justify-content: end;
+  margin: 250px 150px 250px;
+}
+/* MEIDA QUERRY PRO BANNER */
+
+
+@media (max-width: 400px) {
+  .hlavnibanner{
+    background-color: rgba(255, 127, 80, 0.473);
+    height: 40vh;
+  }
+  .hamburger-menu{
+    color: rgb(217, 226, 223);
+  }
+   .hlavnibanner h2{
+    color: rgb(164, 208, 31);
+    font-weight: 550;
+    margin: 180px 125px 120px;
+   }
+}
+@media (max-width: 250px) {
+  .hlavnibanner h2{
+    font-size: 20px;
+    margin: 150px 60px 150px ;
+  }
+}
+
+/* TEXT + OBRAZEK */
+
+.content {
+  margin: 0px 350px 0px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+}
+
+
+.text h{
+  color: chocolate;
+  
+}
+
+.text {
+  font-weight: 800;
+  color: rgb(11, 175, 50);
+  padding-top: 3px;
+  flex: 1;
+}
+
+.image {
+  flex: 1;
+}
+
+.image img {
+  width: 220px;
+  height: 200px; 
+ 
+}
+
+/* MEDIA QUERY [TEXT+OBRAZEK] */
+
+
+@media (max-width: 768px) {
+  .text{
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  .content {
+    margin: 0px 5px 0px;
+    flex-direction: column; 
+  }
+  .image img{
+    border-radius: 120px;
+    margin-top: 10px;
+  }
+ 
+}
+
+/* BANNER INFO */
+
+.banner-info{
+  background-color: bisque;
+  /* border: 3px solid red; */
+  height: 70vh;
+  margin: 0 auto;
+}
+
+.info h2{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+
+.icons {
+  display: flex;
+  padding: 50px 100px 0px;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+
+
+.icons i {
+  color: red;
+  font-size: 30px;
+  text-align: center; /* Zarovnání ikonek na střed */
+  margin-bottom: 10px; /* Odsazení mezi ikonkami a textem */
+}
+
+.text2 p{
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  margin: 0px 400px 0px;
+  font-size: 20px;
+}
+
+/* MEDIA QUERRY PRO BANNER INFO */
+
+@media (max-width: 1050px) {
+  .banner-info{
+    height: 70vh;
+  }
+}
+
+@media (max-width: 764px) {
+    .icons{
+      flex-direction: column;
+      padding: 0px 10px 0px;
+      gap: 20px;
+    }
+
+    .text2 p{
+      margin: 0px 50px 0px
+    }
+  
+    .icons p{
+      margin-top: 10px;
+    }
+
+    .banner-info{
+      height: 140vh;
+    }
+}
+
+/* GALERIE */
+
+.gallery {
+  display: flex; /*nastavení flexboxu*/
+  gap: 10px; /*mezera mezi jednotlivými fotkami*/
+  flex-wrap: wrap; /*dojde k zalomení*/
+  max-width: 800px; /*omezení na šířku celé galerie*/
+  margin: auto; /*aby byla na středu*/
+}
+
+.gallery-item {
+  height: 250px;
+  width: 80%;
+  flex-shrink: 1; /*dovoluji mi se zmenšovat*/
+  border-radius: 20px;
+}
+
+.photo {
+  background-image: url(image/image2/lpa.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.photo-1 {
+  background-image: url(image/image2/lpe.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.textik {
+background-color: #1fa93698;   
+/*pro vycentrování textu: */
+  background-image: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  height: 30vh; /*vyška je jen 100px*/
+}
+
+
+
+
+/* MEDIA QUERY [GALERIE] */
+@media (min-width: 756px) {
+  .gallery-item {
+    width: calc(100% / 3 - 20px); /*odečtení gap 10px + 10px*/
+  }
+  .text {
+    height: 200px; /*výška se zvýší na 200px*/
+  }
+}
+
+/* KONTAKT BANNER */
+
+.kontakt-banner{
+  background-color: bisque;
+  /* border: 3px solid red; */
+  height: 40vh;
+}
+
+.kontakt{
+  display: flex;
+  padding: 70px 200px 40px;
+}
+
+.kontakt h2{
+    padding: 5px 80px 10px;
+}
+
+button{
+  background-color: #746969;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 30px;
+  color: #bc6060;
+  padding: 10px 80px 10px;
+  margin: 0px 455px 0px;
+  transition: all 0.3s;
+}
+
+button:hover{
+  background-color: aliceblue;
+  transition: all 0.3s;
+}
+
+/* MEDIA QUERRY [KONTAKT BANNER] */
+
+@media (max-width: 780px) {
+  .kontakt-banner {
+    height: auto; 
+    padding: 40px 20px;
+  }
+
+  .kontakt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px 20px;
+  }
+
+  .kontakt p{
+    padding: 20px 60px 20px;
+  }
+
+  
+
+  button {
+    font-size: 30px; /* Menší velikost písma */
+    padding: 10px 70px 10px; /* Úprava vnitřního odsazení */
+    margin: 20px 50px 10px; /* Úprava vnějšího odsazení */
+  }
+}
+
+
+/* HERO-BANNER */
+
+.hero-banner{
+  /* border: 3px solid red; */
+  height: 80vh;
+}
+
+.hero-banner h2{
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-banner p{
+  padding: 10px 450px 10cm;
+}
+
+.hero-banner2 p{
+  padding: 0px 450px 0px;
+}
+
+
+
+
+.section {
+  background-color: #746969;
+  padding: 150px 0;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+.section .text {
+  padding: 0 150px;
+  margin-bottom: 40px;
+}
+
+/* SEKCE REVIEW*/
+
+.review {
+  max-width: 1200px;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+}
+.review-text {
+  padding-top: 10px;
+  text-align: center;
+  max-width: 60%;
+  margin: auto;
+}
+.review-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+}
+
+
+/*styly pro kartu recenze*/
+.review-card {
+  max-width: 300px;
+  text-align: center;
+}
+.review-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.text {
+  margin-top: 10px;
+}
+
+/* MEDIA QUERY PRO SEKCI [REVIEW] */
+@media (min-width: 768px){
+  .review-wrapper{
+    flex-direction: row;
+  }
+}
+
+/* GALERIE 2 [4-IMAGES] */
+
+.gallery-hero{
+  display: flex;
+  justify-content: center;
+  /* border: 3px solid red; */
+  height: auto;
+}
+
+.fotky img{
+  width: 500px;
+  height: 500px;
+}
+
+.fotky{
+  padding: 0px 350px 0px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 0;
+}
+
+/* MEDIA QUERRY PRO GALERII 4 IMAGES */
+
+@media (max-width: 745px) {
+  .fotky {
+    margin-top: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fotky img {
+    display: grid;
+    width: 100%; 
+    height: auto; 
+  }
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.348);
+   /* border: 3px solid black; */
+   height: 10vh;
+}
+
+.footer p{
+  display: block;
+  padding: 30px 550px 20px;
+}
+
+p rok{
+  color: red;
+}
+
+@media (max-width: 765px) {
+  .footer{
+    height: 20vh;
+  }
+}
