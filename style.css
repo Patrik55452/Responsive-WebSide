@@ -1,455 +1,366 @@
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
- 
-
-
-
-
-/* NAVIGACE */
-
-nav ul {
-  /* border: 3px solid red; */
-  display: flex;
-  justify-content: space-between; 
-  list-style-type: none;
-}
-
-nav li {
-  flex-grow: 1; 
-  text-align: center;
-}
-
-nav a {
-  font-weight: 800;
-  text-decoration: none;
-  color: black;
-  padding: 20px;
-  display: block;
-  background-color: #f0f0f0; 
-}
-
-nav a:hover {
-  background-color: #bc6060; 
-}
-
-/* HAMBURGER MENU */
-
-.hamburger-menu {
-  display: none;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* MEDIA QUERRY PRO HAMBURGER MENU */
-
-@media (max-width: 500px) {
-  nav a {
-    display: none;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
   }
-
-  .hamburger-menu {
+  nav {
+    background-color: rgba(119, 174, 0, 0.719);
+    height: 50px;
     display: flex;
-    color: rgb(158, 255, 61);
+    align-items: center;
   }
-}
-
-/* HLAVNI BANNER */
-
-.hlavnibanner{
-  background-image: url(image/LP.jpeg);
-  background-position: center;
-  background-size: cover; 
-  display: flex;
-  /* border: 3px solid red; */
-  background-color: bisque;
-  height: 60vh;
-}
-
-.hlavnibanner h2{
-  font-size: 40px;
-  color: rgb(0, 106, 255);
-  display: flex;
-  width: 1200px;
-  /* border: 3px solid red; */
-  justify-content: end;
-  margin: 250px 150px 250px;
-}
-/* MEIDA QUERRY PRO BANNER */
-
-
-@media (max-width: 400px) {
-  .hlavnibanner{
-    background-color: rgba(255, 127, 80, 0.473);
-    height: 40vh;
+  nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
   }
-  .hamburger-menu{
-    color: rgb(217, 226, 223);
+  .icon {
+    display: none;
+    height: 25px;
+    width: 30px;
+    margin: 10px;
   }
-   .hlavnibanner h2{
-    color: rgb(164, 208, 31);
-    font-weight: 550;
-    margin: 180px 125px 120px;
-   }
-}
-@media (max-width: 250px) {
-  .hlavnibanner h2{
-    font-size: 20px;
-    margin: 150px 60px 150px ;
+  .icon img {
+    height: 100%;
+    width: 100%;
+    display: block;
   }
-}
-
-/* TEXT + OBRAZEK */
-
-.content {
-  margin: 0px 350px 0px;
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  text-align: center; 
-}
-
-
-.text h{
-  color: chocolate;
+  @media screen and (max-width: 600px) {
+    nav ul a {
+      display: none;
+    }
+    .icon {
+      display: block;
+    }
+  }
+  nav li {
+    padding-left: 0;
+    padding: 10px;
+    color: rgb(180, 13, 13);
+    margin: auto;
+    width: fit-content;
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
   
-}
-
-.text {
-  font-weight: 800;
-  color: rgb(11, 175, 50);
-  padding-top: 3px;
-  flex: 1;
-}
-
-.image {
-  flex: 1;
-}
-
-.image img {
-  width: 220px;
-  height: 200px; 
- 
-}
-
-/* MEDIA QUERY [TEXT+OBRAZEK] */
-
-
-@media (max-width: 768px) {
-  .text{
-    margin-top: 0px;
-    margin-bottom: 20px;
+  .hero{
+   background-image: url(image/lpe.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+    height: calc(100vh - 50px); 
+    
+  }
+  
+  .hero__text{
+    color: rgb(102, 206, 28);
+    background-color: aquamarine;
+    font-size: 50px;
+    width: 700px;
+    border: 1px solid rgb(121, 11, 11);
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+  }
+  @media screen and (max-width: 800px) {
+    .hero__text{
+      font-size: 25px;
+      max-width: 150px;
+    }
   }
 
-  .content {
-    margin: 0px 5px 0px;
-    flex-direction: column; 
+  /* IMAGE + TEXT */
+
+  .wrapper1 {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 20px;
   }
-  .image img{
-    border-radius: 120px;
-    margin-top: 10px;
+  
+  .image1 {
+    background-image: url(image/lpb.webp);
+    background-position: center 20%;
+    flex-basis: 200px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    height: 200px;
   }
- 
-}
+  
+  .text.image {
+    text-align: justify;
+  }
+
+  /* MEDIA QUERY PRO IMAGE+TEXT */
+
+
+  @media (min-width: 768px) {
+    .wrapper1 {
+      flex-direction: row;
+      max-width: 800px;
+      margin: auto;
+    }
+    .image1{
+      height: auto;
+    }
+  }
+
 
 /* BANNER INFO */
-
 .banner-info{
-  background-color: bisque;
-  /* border: 3px solid red; */
-  height: 70vh;
-  margin: 0 auto;
-}
-
-.info h2{
-  display: flex;
-  justify-content: center;
-  padding-top: 30px;
-}
-
-
-.icons {
-  display: flex;
-  padding: 50px 100px 0px;
-  justify-content: center;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-
-
-
-.icons i {
-  color: red;
-  font-size: 30px;
-  text-align: center; /* Zarovnání ikonek na střed */
-  margin-bottom: 10px; /* Odsazení mezi ikonkami a textem */
-}
-
-.text2 p{
-  display: flex;
-  justify-content: center;
-  padding-top: 40px;
-  margin: 0px 400px 0px;
-  font-size: 20px;
-}
-
-/* MEDIA QUERRY PRO BANNER INFO */
-
-@media (max-width: 1050px) {
-  .banner-info{
-    height: 70vh;
+    background-color: bisque;
+    /* border: 3px solid red; */
+    height: 50vh;
+    margin: 0 auto;
   }
-}
-
-@media (max-width: 764px) {
-    .icons{
-      flex-direction: column;
-      padding: 0px 10px 0px;
-      gap: 20px;
-    }
-
-    .text2 p{
-      margin: 0px 50px 0px
-    }
   
-    .icons p{
-      margin-top: 10px;
-    }
-
-    .banner-info{
-      height: 140vh;
-    }
-}
-
-/* GALERIE */
-
-.gallery {
-  display: flex; /*nastavení flexboxu*/
-  gap: 10px; /*mezera mezi jednotlivými fotkami*/
-  flex-wrap: wrap; /*dojde k zalomení*/
-  max-width: 800px; /*omezení na šířku celé galerie*/
-  margin: auto; /*aby byla na středu*/
-}
-
-.gallery-item {
-  height: 250px;
-  width: 80%;
-  flex-shrink: 1; /*dovoluji mi se zmenšovat*/
-  border-radius: 20px;
-}
-
-.photo {
-  background-image: url(image/image2/lpa.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.photo-1 {
-  background-image: url(image/image2/lpe.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.textik {
-background-color: #1fa93698;   
-/*pro vycentrování textu: */
-  background-image: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  font-size: 40px;
-  font-weight: bold;
-  height: 30vh; /*vyška je jen 100px*/
-}
-
-
-
-
-/* MEDIA QUERY [GALERIE] */
-@media (min-width: 756px) {
-  .gallery-item {
-    width: calc(100% / 3 - 20px); /*odečtení gap 10px + 10px*/
-  }
-  .text {
-    height: 200px; /*výška se zvýší na 200px*/
-  }
-}
-
-/* KONTAKT BANNER */
-
-.kontakt-banner{
-  background-color: bisque;
-  /* border: 3px solid red; */
-  height: 40vh;
-}
-
-.kontakt{
-  display: flex;
-  padding: 70px 200px 40px;
-}
-
-.kontakt h2{
-    padding: 5px 80px 10px;
-}
-
-button{
-  background-color: #746969;
-  border: none;
-  cursor: pointer;
-  border-radius: 30px;
-  font-size: 30px;
-  color: #bc6060;
-  padding: 10px 80px 10px;
-  margin: 0px 455px 0px;
-  transition: all 0.3s;
-}
-
-button:hover{
-  background-color: aliceblue;
-  transition: all 0.3s;
-}
-
-/* MEDIA QUERRY [KONTAKT BANNER] */
-
-@media (max-width: 780px) {
-  .kontakt-banner {
-    height: auto; 
-    padding: 40px 20px;
-  }
-
-  .kontakt {
+  .info h2{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  
+  
+  .icons {
+    display: flex;
+    padding: 50px 100px 0px;
+    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 50px 20px;
+    flex-wrap: wrap;
+  }
+  
+  
+  
+  
+  .icons i {
+    color: red;
+    font-size: 30px;
+    text-align: center; 
+    margin-bottom: 10px; 
+  }
+  
+  .text2 p{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    margin: 0px 400px 0px;
+    font-size: 20px;
+  }
+  
+  /* MEDIA QUERRY PRO BANNER INFO */
+  
+  @media (max-width: 1050px) {
+    .banner-info{
+      height: 70vh;
+    }
+  }
+  
+  @media (max-width: 1100px) {
+      .icons{
+        flex-direction: column;
+        padding: 0px 10px 0px;
+        gap: 20px;
+      }
+  
+      .text2 p{
+        margin: 0px 50px 0px
+      }
+    
+      .icons p{
+        margin-top: 10px;
+      }
+  
+      .banner-info{
+        height: auto;
+      }
   }
 
-  .kontakt p{
-    padding: 20px 60px 20px;
+  /*  GALERIE 9 IMAGES */
+
+  .gallery {
+    display: flex;
+    gap: 15px; 
+    flex-wrap: wrap; 
+    max-width: 1000px; 
+    margin: auto; 
+  }
+  
+  .gallery-item {
+    height: 200px;
+    width: 100%;
+    flex-shrink: 1; 
+    border-radius: 15px;
+  }
+  
+  .photo {
+    background-image: url(image/hybrid.jpg);
+    background-size: cover;
+    background-position: center 120%;
+  }
+  
+  .photo-1 {
+    background-image: url(image/lpa.jpg);
+    background-size: cover;
+    background-position: center 10%;
+  }
+  
+  .text {
+    background-color: rgba(25, 170, 37, 0.643);
+    background-image: none;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    font-size: 32px;
+    font-weight: bold;
+    height: 100px; 
+  }
+
+    /* MEDIA QUERY PRO GALERII */
+
+  @media (min-width: 756px) {
+    .gallery-item {
+      width: calc(100% / 3 - 20px); 
+    }
+    .text {
+      height: 200px;
+    }
+  }
+
+
+
+  /* KONTAKT BANNER */
+
+  .kontakt-banner{
+    background-color: bisque;
+    /* border: 3px solid red; */
+    height: 40vh;
+  }
+  
+  .kontakt{
+    display: flex;
+    padding: 70px 200px 40px;
+  }
+  
+  .kontakt h2{
+      padding: 5px 80px 10px;
+  }
+  
+  button{
+    background-color: #746969;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 30px;
+    color: #bc6060;
+    padding: 10px 80px 10px;
+    margin: 0px 455px 0px;
+    transition: all 0.3s;
   }
 
   
-
-  button {
-    font-size: 30px; /* Menší velikost písma */
-    padding: 10px 70px 10px; /* Úprava vnitřního odsazení */
-    margin: 20px 50px 10px; /* Úprava vnějšího odsazení */
+  
+  @media  (max-width: 1100px) {
+    .kontakt-banner{
+      height: auto;
+    }
+    .kontakt {
+      flex-direction: column;
+      padding: 30px 20px; 
+    }
+  
+    .kontakt h2 {
+      padding: 0; 
+    }
+  
+    button {
+      margin: auto 0; 
+      padding: 10px 40px; 
+    }
   }
+  
+/* SEKCE REVIEW */
+   
+  .review{
+    margin: 0px 250px 0px;
+    /* border: 3px solid blue; */
+    display: flex;
+  }
+
+  .banner h2{
+    display: flex;
+    justify-content: center;
+  }
+
+  .wrapper{
+    display: flex;
+    gap: 200px;
+  }
+
+.circle1,.circle2{
+  position: relative;
 }
 
-
-/* HERO-BANNER */
-
-.hero-banner{
-  /* border: 3px solid red; */
-  height: 80vh;
-}
-
-.hero-banner h2{
-  padding-top: 15px;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-banner p{
-  padding: 10px 450px 10cm;
-}
-
-.hero-banner2 p{
-  padding: 0px 450px 0px;
-}
-
-
-
-
-.section {
-  background-color: #746969;
-  padding: 150px 0;
-  text-align: center;
-}
-
-.section h2 {
-  margin-bottom: 20px;
-}
-
-.section .text {
-  padding: 0 150px;
-  margin-bottom: 40px;
-}
-
-/* SEKCE REVIEW*/
-
-.review {
-  max-width: 1200px;
-  margin: auto;
-}
-h1 {
-  text-align: center;
-}
-.review-text {
-  padding-top: 10px;
-  text-align: center;
-  max-width: 60%;
-  margin: auto;
-}
-.review-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 50px;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 30px;
-}
-
-
-/*styly pro kartu recenze*/
-.review-card {
-  max-width: 300px;
-  text-align: center;
-}
-.review-card img {
+.circle1 img,
+.circle2 img {
+  padding-bottom: 5px;
+  border-radius: 100%;
   width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-.text {
-  margin-top: 10px;
+  height: 160px;
+  display: block;
+  margin: 0 auto; 
 }
 
-/* MEDIA QUERY PRO SEKCI [REVIEW] */
-@media (min-width: 768px){
-  .review-wrapper{
-    flex-direction: row;
+
+ .circle1 p{
+ display: flex;
+ }
+ .circle2 p{
+  display: flex;
+ }
+
+  @media  (max-width: 1200px) {
+
+      .review{
+        margin: auto;
+        
+      }
+      .Text p{
+        height: auto;
+      }
+      .wrapper{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 20px;
+      }
   }
-}
 
 /* GALERIE 2 [4-IMAGES] */
 
 .gallery-hero{
   display: flex;
   justify-content: center;
-  /* border: 3px solid red; */
   height: auto;
 }
 
-.fotky img{
-  width: 500px;
-  height: 500px;
-}
-
 .fotky{
-  padding: 0px 350px 0px;
+  padding: 0;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0;
+}
+.fotky img{
+  width: 100%;
+  height: 500px;
 }
 
 /* MEDIA QUERRY PRO GALERII 4 IMAGES */
@@ -457,7 +368,6 @@ h1 {
 @media (max-width: 745px) {
   .fotky {
     margin-top: 10px;
-    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -470,25 +380,15 @@ h1 {
   }
 }
 
-.footer{
-  display: flex;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.348);
-   /* border: 3px solid black; */
-   height: 10vh;
+/* FOOTER */
+
+.footer {
+  background-color: #555; 
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-.footer p{
-  display: block;
-  padding: 30px 550px 20px;
-}
-
-p rok{
-  color: red;
-}
-
-@media (max-width: 765px) {
-  .footer{
-    height: 20vh;
-  }
+.copyright {
+  margin: 0;
 }
